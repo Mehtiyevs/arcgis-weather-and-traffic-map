@@ -37,6 +37,7 @@ python -m venv .venv
 cd .venv
 cd Scripts
 activate
+pip install -r requirements.txt # or install one by one
 ```
 
 **Important:**  
