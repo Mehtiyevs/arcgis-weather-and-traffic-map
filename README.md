@@ -24,8 +24,14 @@ ARCGIS_PASSWORD=your_arcgis_password
 
 ### Activate Virtual Environment
 
-1. Open a terminal in **VS Code**.  
-2. Move into the `.venv` folder step by step:
+1. Create a virtual environment
+## Windows (PowerShell / CMD)
+
+```bat
+python -m venv .venv
+
+2. Open a terminal in **VS Code**.  
+3. Move into the `.venv` folder step by step:
 
 ```bash
 cd .venv
