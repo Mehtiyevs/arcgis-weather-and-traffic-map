@@ -1,0 +1,12 @@
+{
+  "feeds": [
+    {
+      "url": "https://example-municipality.gov.my/traffic-updates",
+      "entry_selector": "div.incident", 
+      "lat_selector": ".lat", 
+      "lon_selector": ".lon",
+      "text_selector": ".description",
+      "delay": 1.0
+    }
+  ]
+}

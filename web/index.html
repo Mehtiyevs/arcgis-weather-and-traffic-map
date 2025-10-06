@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ACKGIS • Weather & Traffic Hotspots (MRT)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ArcGIS JS -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.30/"></script>
+
+  <style>
+    :root { --header-h: 56px; }
+    html, body { height: 100%; margin: 0; font-family: system-ui, Segoe UI, Arial, sans-serif; }
+    header {
+      height: var(--header-h);
+      display: flex; align-items: center; gap: 12px;
+      padding: 0 16px; border-bottom: 1px solid #e5e5e5;
+      background: #1473e6; color: #fff; font-weight: 600;
+    }
+    header .toggles { margin-left: 16px; color:#fff; font-weight:500; }
+    header label { margin-right: 16px; cursor: pointer; }
+    #view { height: calc(100vh - var(--header-h)); width: 100%; }
+    .esri-ui { font-family: inherit; }
+    .a-panel { padding: 10px; max-width: 320px; }
+    .warn { background:#fff3cd; border:1px solid #ffe69c; padding:8px; border-radius:6px; margin-bottom:8px; }
+    .warn h4 { margin:0 0 6px 0; font-size:14px; }
+    .warn small { color:#666; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>ACKGIS</div>
+    <div style="opacity:.9;font-weight:500">Weather &amp; Traffic Hotspots (MRT)</div>
+    <div class="toggles">
+      <label><input id="chkPoints"  type="checkbox" checked> Points</label>
+      <label><input id="chkHeat"    type="checkbox" checked> Heatmap</label>
+      <label><input id="chkHex"     type="checkbox" checked> Hex Hotspots</label>
+      <label><input id="chkWeather" type="checkbox" checked> Weather</label>
+    </div>
+  </header>
+
+  <div id="view"></div>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* --- Layout scaffold --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #1f2937;
+  background: #f7f8fa;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: #0b5fff; /* Esri brand blue vibe */
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.topbar .brand {
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+
+.topbar .subtitle {
+  opacity: .9;
+  font-weight: 500;
+}
+
+.controlbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 18px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.toggle-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 6px 10px;
+  margin-right: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: background .15s ease;
+}
+.toggle-group label:hover { background: #eef2f7; }
+
+.pill {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.pill:hover { background: #f3f4f6; }
+
+.right-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: calc(100vh - 116px); /* topbar+controlbar+footer approx */
+}
+
+#viewDiv {
+  height: calc(100vh - 180px);
+  margin: 12px 18px 6px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  background: #fff;
+}
+
+#timeSliderDiv {
+  margin: 0 18px 8px;
+  padding: 6px 10px 10px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.04);
+}
+
+.foot {
+  padding: 8px 18px 14px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Esri widget polish */
+.esri-widget, .esri-widget--panel { border-radius: 12px !important; }
+.esri-legend__message { display: none; }
+
+/* Small screens */
+@media (max-width: 900px) {
+  .controlbar { flex-direction: column; align-items: flex-start; gap: 8px; }
+  #viewDiv { height: calc(100vh - 210px); }
+}
